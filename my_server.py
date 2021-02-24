@@ -1,7 +1,11 @@
 from flask import Flask
 app = Flask(__name__)
 
-@app.route('/')
+books = [{'Name': 'Snow White', 'Author': 'Grimm brothers'},
+         {'Name': "Alice's Adventures in Wonderland", 'Author': 'Lewis Carrol'}
+         ]
+
+@app.route('/', methods=['GET'])
 def hello_world():
     return 'Hello world!'
 
